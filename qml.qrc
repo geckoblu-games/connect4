@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>icons/minimaterial/svg/menu.svg</file>
+        <file>icons/minimaterial/index.theme</file>
+        <file>images/red.svg</file>
+        <file>images/yellow.svg</file>
+        <file>qml/PlayerRect.qml</file>
+        <file>images/tile.svg</file>
+        <file>qml/Board.qml</file>
+        <file>qml/Tile.qml</file>
+        <file>qml/Stone.qml</file>
+        <file>qml/WinnerRect.qml</file>
+        <file>qml/DialogSettings.qml</file>
+        <file>images/connect4.svg</file>
+        <file>qml/DialogAbout.qml</file>
+        <file>qml/Enums.qml</file>
+    </qresource>
+</RCC>

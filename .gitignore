@@ -1,0 +1,14 @@
+blu-connect4
+
+*.pro.user*
+
+Makefile*
+/.qmake.cache
+/.qmake.stash
+qrc_*.cpp
+*.o
+moc_*
+
+/7x6.book
+/7x6_mini.book
+/7x6_small.book
