@@ -2,20 +2,14 @@
 
 #include <QObject>
 
-class LevelClass
-{
-    Q_GADGET
+class LevelClass {
+  Q_GADGET
 public:
-    enum Value {
-        Easy,
-        Normal,
-        Hard,
-        Expert
-    };
-    Q_ENUM(Value)
+  enum Value { Easy, Normal, Hard, Expert };
+  Q_ENUM(Value)
 
 private:
-    explicit LevelClass() {};
+  explicit LevelClass(){};
 };
 
 typedef LevelClass::Value Level;

@@ -1,5 +1,6 @@
-import QtQuick 2.12
-import QtGraphicalEffects 1.12
+import QtQuick
+//import QtGraphicalEffects 1.12
+
 
 Item {
     id: item
@@ -14,6 +15,7 @@ Item {
         //smooth: true
     }    
 
+    /*
     HueSaturation {
         id: saturation
         anchors.fill: tile
@@ -22,6 +24,7 @@ Item {
         saturation: 0.0
         lightness: 0.0
     }
+    */
 
     Rectangle {
         id: frame1
@@ -33,10 +36,11 @@ Item {
     }    
 
     function highlight(flag) {
+        console.log("Tile.highlight not woring");
         if (flag === true) {
-            saturation.lightness = +0.08
+            // saturation.lightness = +0.08
         } else {
-            saturation.lightness = 0.0
+            // saturation.lightness = 0.0
         }
     }
 
