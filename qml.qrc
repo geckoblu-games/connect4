@@ -15,5 +15,6 @@
         <file>images/connect4.svg</file>
         <file>qml/DialogAbout.qml</file>
         <file>qml/Enums.qml</file>
+        <file>qml/huesaturation.frag.qsb</file>
     </qresource>
 </RCC>

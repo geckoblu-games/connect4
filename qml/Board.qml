@@ -1,5 +1,4 @@
-import QtQuick 2.12
-import QtGraphicalEffects 1.12
+import QtQuick
 
 Rectangle {
     id: root
@@ -80,7 +79,7 @@ Rectangle {
             hoverEnabled: true
             cursorShape: Qt.BlankCursor
 
-            onPositionChanged: {
+            onPositionChanged: (mouse) => {
                 if (sensitive) {
                     cursorShape =  Qt.ArrowCursor;
                     var sc =Math.floor(mouse.x / tilesize);
@@ -92,7 +91,7 @@ Rectangle {
                 }
             }
 
-            onClicked: {
+            onClicked: (mouse) => {
                 if (sensitive) {
                     var sc =Math.floor(mouse.x / tilesize);
                     if (sc >= 0 && sc < columns) {
@@ -103,7 +102,7 @@ Rectangle {
         }
     }
 
-    Keys.onPressed: {
+    Keys.onPressed: (event) =>  {
         if (event.key === Qt.Key_Left) {
             //console.log('Left')
             board.moveLeft()

@@ -10,12 +10,14 @@ Play the classic [Connect Four](https://en.wikipedia.org/wiki/Connect_Four) game
 * Port to Qt 6
 
 ## Build
-The Qt libraries (version >= 5.12 but < 6.0) are required. Make sure that they are installed on your system.
+The Qt libraries (version >= 6.4)are required. Make sure that they are installed on your system.
 
     qmake -o Makefile connect4.pro
     make
 
 Remember to copy the 7x6*.book(s) alongside the executable
+
+A branch qt5_dev is available to build using QT5 (version >= 5.12)
 
 ## Credits
 
