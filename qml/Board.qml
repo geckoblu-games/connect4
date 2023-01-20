@@ -91,7 +91,7 @@ Rectangle {
                 }
             }
 
-            onClicked: {
+            onClicked: (mouse) => {
                 if (sensitive) {
                     var sc =Math.floor(mouse.x / tilesize);
                     if (sc >= 0 && sc < columns) {
