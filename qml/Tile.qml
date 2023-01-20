@@ -9,22 +9,22 @@ Item {
     height: width;   
 
     Image {
-        id: tile
+        id: tileImage
         source: "/images/tile.svg"
         sourceSize: Qt.size(parent.width, parent.height)
-        //smooth: true
+        visible: false
     }    
 
-    /*
-    HueSaturation {
-        id: saturation
-        anchors.fill: tile
-        source: tile
-        hue: 0.0
-        saturation: 0.0
-        lightness: 0.0
+    ShaderEffect {
+        id: huesat
+        anchors.fill: parent;
+        property variant source: tileImage
+        property real lightness: 0.0
+        property variant hsl: Qt.vector3d(0.0, 0.0, lightness)
+
+        // vertexShader: "default.vert.qsb"
+        fragmentShader: "huesaturation.frag.qsb"
     }
-    */
 
     Rectangle {
         id: frame1
@@ -36,11 +36,11 @@ Item {
     }    
 
     function highlight(flag) {
-        console.log("Tile.highlight not woring");
+        // console.log("Tile.highlight not woring");
         if (flag === true) {
-            // saturation.lightness = +0.08
+            huesat.lightness = +0.1
         } else {
-            // saturation.lightness = 0.0
+            huesat.lightness = 0.0
         }
     }
 

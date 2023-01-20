@@ -79,7 +79,7 @@ Rectangle {
             hoverEnabled: true
             cursorShape: Qt.BlankCursor
 
-            onPositionChanged: {
+            onPositionChanged: (mouse) => {
                 if (sensitive) {
                     cursorShape =  Qt.ArrowCursor;
                     var sc =Math.floor(mouse.x / tilesize);
@@ -102,7 +102,7 @@ Rectangle {
         }
     }
 
-    Keys.onPressed: {
+    Keys.onPressed: (event) =>  {
         if (event.key === Qt.Key_Left) {
             //console.log('Left')
             board.moveLeft()
