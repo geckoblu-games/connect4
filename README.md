@@ -10,8 +10,9 @@ The Qt libraries (version >= 6.4) are required. Make sure that they are installe
 
     qmake -o Makefile connect4.pro
     make
+    sudo make install
 
-Remember to copy the 7x6*.book(s) alongside the executable
+Remember to copy the 7x6*.book(s) alongside the executable if you install it manually
 
 A branch qt5_dev is available to build using QT5 (version >= 5.12)
 

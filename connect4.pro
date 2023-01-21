@@ -27,7 +27,7 @@ QML_DESIGNER_IMPORT_PATH =
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
+else: unix:!android: target.path = /usr/local/games
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES +=
@@ -43,33 +43,8 @@ HEADERS += \
     src/gamemodel.hpp \
     src/levelclass.hpp
 
-OTHER_FILES += \
-    src/brain/7x6.book \
-    src/brain/7x6_mini.book \
-    src/brain/7x6_small.book
+INSTALLS += openings
 
-COPIES +=  openings
-#INSTALLS += openings
+openings.files = $$files( src/brain/7x6*.book)
+openings.path = $$target.path
 
-openings.files = $$OTHER_FILES # $$files( src/brain/7x6*.book)
-openings.path = $$OUT_PWD # $$target.path
-
-# # copies the given files to the destination directory
-# defineTest(copyToDestDir) {
-#     files = $$1
-#     dir = $$2
-#     # replace slashes in destination path for Windows
-#     win32:dir ~= s,/,\\,g
-#
-#     for(file, files) {
-#         file = $$PWD/$$file
-#         # replace slashes in source path for Windows
-#         win32:file ~= s,/,\\,g
-#
-#         QMAKE_POST_LINK += $$QMAKE_COPY $$shell_quote($$file) $$shell_quote($$dir) $$escape_expand(\\n\\t)
-#     }
-#
-#     export(QMAKE_POST_LINK)
-# }
-#
-# copyToDestDir($$OTHER_FILES, $$OUT_PWD)
